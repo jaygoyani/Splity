@@ -1,0 +1,233 @@
+
+
+Functional Requirment:--
+
+1)--Functionality to add friend.
+2)--Splitmoney between two friend.
+3)--Functionality to create group.
+4)--Split money in group.
+5)--Send request to friend to pay depth.
+6)--Sattel up by different method : cash,net banking.
+7)--Add daily expances.
+8)--Show report for daily,weekly,mounthly,yearly or custoem expances.
+9)--Send email to user about report as user requests.
+10)--Add default expances.
+
+Non-Functional Requirmrnt:--
+
+Usability :-	
+	=>There is a consistency in all the modules and webpages
+	=>There is proper instruction on each page
+
+Reliability :-
+	=>Each data record is stored on a well-built efficient database schema
+	=>There is no risk of data loss
+	=>The internal evaluation of data is well coded
+
+Supportability :-
+	=>The system is well built to support any machine
+	=>Maintainability of the system is easy
+	=>All the plans for future augments can be easily incorporated within the present system
+
+Performance :-
+	=>In order to ease the accessibility, the types of expenses are categorised along with an option to name on the own
+	=>Throughput of the system is increased due to light weight database support
+
+Availability :-
+	=>The system is available all the time, no time constraint
+Usecases:--
+
+1)--AddFrined
+
+--------------------------------------------------------------------------------------
+
+UsecaeName   :  Add friend
+summary      :  User can add friend.
+Actors       :  User is involve.
+Precondition :  Friend must have account in system.
+Description  :  User enters username of friend.
+	     :  System shows message "Friend added successfully.
+Exception    :  Invalid username.
+	     :  Server error.
+Postcondition:  System shows message "Friend added successfully and return to home page.
+
+_______________________________________________________________________________________
+
+2)--SplitMoney
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  splitMoney
+summary      :  User can add expences with friends and expences will be split in 
+		both users account.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+	     :	Friend must be valid user. 
+Description  :  User selects friends.
+	     :  Add description.
+	     :  Add amount to split.
+	     :  Select friend who has paid bill.
+	     :  Amount will split in all selected friends account.
+Exception    :  Invalid data entered in amount.
+	     :  Server error.
+Postcondition:  System shows expence details in activity section.
+	     :  Returns to home page.
+	     
+_______________________________________________________________________________________
+	   
+3)--CreateGroup
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Create Group
+summary      :  User can create group.
+Actors       :  User is involve.
+Precondition :  All Friends must have account in system.
+Description  :  User enters username of friends.
+	     :  User enters group name.
+	     :  User enters description about group.
+	     :  System shows message "Group successfully created."
+Exception    :  Invalid usernames.
+	     :  Group name already exists.
+Postcondition:  System shows message "Friend added successfully and return to home page.
+
+_______________________________________________________________________________________
+
+4)--SplitMoney in group
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  splitMoney in group
+summary      :  User can add expences in group and expences will be split in 
+				group members account.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+	   		 :	Friend must be valid user. 
+Description  :  User selects group.
+	     	 :  Add description.
+	      	 :  Add amount to split.
+	      	 :  Select friend who has paid bill.
+	     	 :  Amount will split in all gropu menbers account.
+Exception    :  Invalid data entered in amount.
+	     	 :  Server error.
+Postcondition:  System shows expence details in activity section.
+	     	 :  Returns to home page.
+	     
+
+_______________________________________________________________________________________
+
+5)--Send Reminder
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Send Reminder
+summary      :  User can send request to friend to pay depts.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+	     	 :	Friend must be valid user. 
+Description  :  User selects friends.
+	     	 :  Add description.
+	         :  System sends reminder to friend.
+Exception    :  Server error.
+Postcondition:  Reminder will be send in friends activity section.
+			 :  User Returns to home page.
+
+_______________________________________________________________________________________
+
+6)--SattleUp
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Sattle Up
+summary      :  User can pay friend by cash or online paymment and sattel up.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+	     	 :	Friend must be valid user. 
+Description  :  User selects friends.
+	         :  Add description.
+	     	 :  Select option to pay.
+	     	 :  Add amount to pay.
+Exception    :  Server error.
+Postcondition:  System shows details in activity section.
+	     	 :  System will add tranjection in both accounts.
+	     	 :  Returns to home page.
+	     
+_______________________________________________________________________________________
+
+7)--Add Expences
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Add Expences
+summary      :  User can add expences.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+Description  :  Add description (Select expance category).
+	     	 :  Add amount of expance.
+	         :  Select date of expance. 
+	     	 :  Amount will be added in users account.
+Exception    :  Invalid data entered in amount.
+	         :  Server error.
+Postcondition:  System shows expence details in activity section.
+	     	 :  User returns to home page.
+
+
+_______________________________________________________________________________________
+
+8)--View Report
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  View Report
+summary      :  User can see report in form of pie chart.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+Description  :  User selects option (daily , weekly, mounthly , yearly or  custome).
+	     	 :  In case of custome select dates.
+	     	 :  result will be shown in form of pie chart.
+Exception    :  Invalid date entered in amount.
+	     	 :  Server error.
+Postcondition:  User returns to home page.
+	     
+_______________________________________________________________________________________
+
+9)--Mail Report
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Mail Report
+summary      :  User can request for email about report.
+Actors       :  User is involve.
+Precondition :  User must be loged in. 
+Description  :  User enters mail id.
+		     :  Mail will be send to users mail id.
+Exception    :  Server error.
+Postcondition:  Returns to home page.
+
+_______________________________________________________________________________________
+
+10)--Set default expances
+
+---------------------------------------------------------------------------------------
+
+UsecaeName   :  Ser default expances
+summary      :  User can set,remove defaukt expances.
+Actors       :  User is involve.
+Precondition :  User must be loged in.
+Description  :  User selects option.
+	     	 :  Add description.
+	         :  Add amount of expances.
+	         :  Select duration of time.
+	     	 :  Expence will be added in users account.
+Exception    :  Invalid data entered in amount.
+	         :  Server error.
+Postcondition:  System shows expence details in activity section.
+	         :  Returns to home page.
+	     
+
+	     
+
+	     
+
+	     
+
